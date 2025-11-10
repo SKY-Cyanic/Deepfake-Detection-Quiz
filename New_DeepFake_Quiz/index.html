@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>딥페이크 판별 퀴즈</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>딥페이크 판별 퀴즈</h1>
+    <div id="score">점수: <span id="score-value">0</span></div>
+    <div id="quiz-area">
+      <div id="question-title"></div>
+      <div class="media-wrap">
+        <img id="quiz-image" src="" alt="quiz media" class="hidden" />
+        <video id="quiz-video" class="hidden" autoplay muted loop playsinline></video>
+        <div id="highlights-container"></div>
+      </div>
+      <div class="btn-row">
+        <button id="true-btn" class="choice-btn">진짜</button>
+        <button id="fake-btn" class="choice-btn">가짜</button>
+      </div>
+      <div id="feedback" class="hidden">
+        <p id="feedback-msg"></p>
+        <p><strong>기법:</strong> <span id="feedback-tech"></span></p>
+        <ul id="feedback-hints"></ul>
+        <button id="next-btn">다음 문제</button>
+      </div>
+    </div>
+    <div id="final-area" class="hidden">
+      <h2>퀴즈 종료</h2>
+      <p id="final-score"></p>
+      <p id="final-remark"></p>
+      <button id="restart-btn">다시하기</button>
+    </div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

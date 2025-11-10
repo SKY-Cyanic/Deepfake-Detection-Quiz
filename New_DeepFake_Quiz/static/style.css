@@ -1,0 +1,79 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --accent: #4b7bec;
+  --muted: #666;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: #222;
+}
+.container {
+  max-width: 860px;
+  margin: 32px auto;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(20,20,40,0.06);
+}
+h1 { margin: 0 0 12px; }
+#score { margin-bottom: 12px; font-weight: 600; }
+
+/* 미디어(이미지/비디오)를 감싸는 컨테이너 */
+.media-wrap {
+  position: relative;
+  width: 100%;
+  height: 480px; /* 고정 높이 설정 */
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+/* 이미지와 비디오 공통 스타일 */
+.media-wrap img,
+.media-wrap video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain; /* 비율을 유지하며 컨테이너에 맞춤 */
+}
+
+#highlights-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.highlight-box {
+  position: absolute;
+  border: 3px dashed rgba(255,80,80,0.95);
+  background: rgba(255,80,80,0.12);
+}
+.btn-row {
+  margin: 12px 0;
+  display:flex;
+  gap: 10px;
+}
+.choice-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  transition: background-color 0.2s;
+}
+.choice-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+#fake-btn { background: #ff4757; }
+.hidden { display: none !important; }
+#feedback { margin-top: 14px; padding: 12px; border-radius: 8px; background:#f7f9ff; }
+#final-area { text-align: center; }
